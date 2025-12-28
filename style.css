@@ -1,0 +1,125 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #f4f4f4; 
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+}
+
+
+.main-container {
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    max-width: 1000px;
+    margin: 0 auto; 
+    padding: 80px 20px;
+    min-height: 80vh; 
+    gap: 60px;
+}
+
+
+.profile-img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%; 
+    object-fit: cover;
+    filter: grayscale(100%); 
+}
+
+
+.text-section {
+    max-width: 450px;
+}
+
+h1 {
+    font-size: 60px; 
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+.button-container {
+    display: flex;
+    gap: 20px; 
+}
+
+.circle-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 14px;
+    transition: transform 0.2s;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.circle-btn:hover {
+    transform: scale(1.05); 
+}
+
+.red { background-color: #ff4030; }
+.teal { background-color: #80d6d1; }
+
+footer {
+    border-top: 1px solid #ccc;
+    padding: 40px 10%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    background-color: #f4f4f4;
+}
+
+.footer-column h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.social-icons i {
+    font-size: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .button-container {
+        justify-content: center;
+    }
+    
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}

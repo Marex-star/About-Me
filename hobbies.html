@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        
+        .hobby-container {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px #0000000a;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #666;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .back-btn:hover {
+            color: #000;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+       
+        .result-box {
+            background-color: #f9f9f9;
+            border: 2px #ccc;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #hobby-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: #ff4030; 
+        }
+
+        #hobby-detail {
+            font-size: 16px;
+            color: #555;
+            margin-top: 10px;
+        }
+
+       
+        .spin-btn {
+            background-color: #80d6d1; 
+            color: black;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .spin-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px #80d6d166;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="hobby-container">
+        <a href="index.html" class="back-btn">← Back to Home</a>
+
+        <h1>My Hobbies</h1>
+         <p>I love keeping busy. Click the button below to see my hobbies</p>
+
+        <div class="result-box">
+            <div id="hobby-title">?</div>
+            <div id="hobby-detail">Click the button to pick a hobby</div>
+        </div>
+
+        <button class="spin-btn" onclick="pickRandomHobby()">Pick an Activity</button>
+    </div>
+
+    <script>
+    
+        const hobbies = [
+            { title: "Gaming", detail: "Currently grinding rank in Call of Duty." },
+            { title: "Coding", detail: "Building a new website using React." },
+            { title: "Anime", detail: "Watching 'One Piece' by Eiichiro Oda." },
+            { title: "Football", detail: "Watching the Premier League highlights." },
+            { title: "Music", detail: "Listening to Afrobeats and chill mixes." },
+            { title: "Social Media", detail: "Checking Instagram and Twitter for latest updates." }
+        ];
+
+        function pickRandomHobby() {
+            
+            const titleElement = document.getElementById('hobby-title');
+            const detailElement = document.getElementById('hobby-detail');
+
+            const randomIndex = Math.floor(Math.random() * hobbies.length);
+            
+            titleElement.innerText = hobbies[randomIndex].title;
+            detailElement.innerText = hobbies[randomIndex].detail;
+        }
+    </script>
+
+</body>
+</html>

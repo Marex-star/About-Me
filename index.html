@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <div class="image-section">
+            <img src="profile.jpg" alt="Onyoh Oghenemaro" class="profile-img" />
+        </div>
+
+        <div class="text-section">
+            <h1 id="greeting">Hello</h1>
+            <h2>A Bit About Me</h2>
+            <p>My name is Onyoh Oghenemaro, a student of Bowen University in the Information Technology Program. I am a web developer in training who's also trying to learn data analysis.</p>
+            
+            <div class="button-container">
+                <a href="hobbies.html" class="circle-btn red">Hobbies</a>
+                <a href="#contacts" class="circle-btn teal">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contacts">
+        <div class="footer-column">
+            <h3>Phone</h3>
+            <p>07015797276<br>09064085025</p>
+        </div>
+        <div class="footer-column">
+            <h3>Email</h3>
+            <p>oghenemaroemmanuel584@gmail.com</p>
+        </div>
+        <div class="footer-column">
+            <h3>Follow Me</h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/mare_x48?igsh=ZGI0aW12cWl3MzZm"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/emmanuel_o94231"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-column copyright">
+            <p>&copy; 2025 By Onyoh Oghenemaro</p>
+        </div>
+    </footer>
+<script>
+       
+        const hour = new Date().getHours();
+        const greetingElement = document.getElementById('greeting');
+
+        if (hour < 12) {
+            greetingElement.innerText = "Hello Good Morning!";
+        } else if (hour < 18) {
+            greetingElement.innerText = "Hello Good Afternoon!";
+        } else {
+            greetingElement.innerText = "Hello Good Evening!";
+        }
+    </script>
+</body>
+</html>
